@@ -1,9 +1,11 @@
 import Book from './Book';
 
 const BooksList = () => (
-  <ul>
+  <div className="bookslist-container">
     <Book />
-  </ul>
+    <Book />
+    <Book />
+  </div>
 );
 
 export default BooksList;

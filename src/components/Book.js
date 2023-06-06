@@ -1,5 +1,5 @@
 const Book = () => (
-  <div>
+  <div className="book-container">
     <div>
       <span>
         Action
@@ -10,7 +10,7 @@ const Book = () => (
       <span>
         Suzanne Collins
       </span>
-      <ul>
+      <ul className="book-btns">
         <li>
           <button type="button">
             Comments
@@ -28,7 +28,7 @@ const Book = () => (
         </li>
       </ul>
     </div>
-    <div>
+    <div className="book-progress">
       <img alt="Progress" />
       <div>
         <span>
@@ -39,7 +39,7 @@ const Book = () => (
         </span>
       </div>
     </div>
-    <div>
+    <div className="book-chapters">
       <span>
         CURRENT CHAPTER
       </span>

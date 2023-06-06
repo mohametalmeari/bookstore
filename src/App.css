@@ -1,39 +1,84 @@
-.App {
-  text-align: center;
+.book-container {
+  display: flex;
+  background-color: white;
+  padding:2rem 1.5rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #fafafa;
+}
+.book-btns{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: stretch;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.book-btns li {
+  border-right: solid 2px #e8e8e8;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.book-btns li:last-child {
+  border-right: none;
+}
+.book-btns button {
+  border: none;
+  background-color: transparent;
+}
+.book-chapters {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bookslist-container {
+  padding: 2.375rem 6.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.book-progress{
+  display: flex;
+  gap: 1.3rem;
+}
 
-  to {
-    transform: rotate(360deg);
-  }
+.book-progress div{
+  display: flex;
+  flex-direction: column;
+}
+
+.addbook-container {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 1px #e8e8e8;
+  padding: 0 6.25rem 6.25rem;
+}
+
+.addbook-form{
+  display: flex;
+  justify-content: stretch;
+}
+
+.addbook-form {
+  display: flex;
+  justify-content: stretch;
+  gap: 2.125rem;
+}
+.addbook-form * {
+  padding: 0.8rem 1rem;
+}
+
+.addbook-title {
+  flex: 3;
+}
+.addbook-list {
+  flex: 1.5;
+}
+.addbook-btn {
+  flex: 1;
 }
