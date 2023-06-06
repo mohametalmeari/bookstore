@@ -1,70 +1,207 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+  <img src=".\src\images\icon.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-In the project directory, you can run:
+  <h3><b>Bookstore README</b></h3>
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- TABLE OF CONTENTS -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📗 Table of Contents
 
-### `npm test`
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowlednpments](#acknowlednpments)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- PROJECT DESCRIPTION -->
 
-### `npm run build`
+# 📖 Bookstore <a name="about-project"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Bookstore**  is a website for saving books and tracking your favorite books' reading progress.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Built With <a name="built-with"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tech Stack <a name="tech-stack"></a>
 
-### `npm run eject`
+> Our tech stack consisting of React for the front-end.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Key Features <a name="key-features"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> Key Features of Bookstore Website
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Includes the following features...
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Add New Books**
+- **Track Reading Progress**
+- **Remove Books From List**
 
-### Code Splitting
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- LIVE DEMO -->
 
-### Analyzing the Bundle Size
+## 🚀 Live Demo <a name="live-demo"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- > Open the link bellow: -->
+> Comming soon ...
 
-### Making a Progressive Web App
+ <!-- - [Live Demo Link](https://mohametalmeari.github.io/bookstore) -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Advanced Configuration
+<!-- GETTING STARTED -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 💻 Getting Started <a name="getting-started"></a>
+
+> A new developer can use this project as a guide to creating a Book Library, or any other kind of list such as TV series.
+
+To get a local copy up and running, follow these steps.
+
+
+### Prerequisites
+
+In order to run this project you need:
+
+```sh
+  npm start
+```
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd my-folder
+  git clone https://github.com/mohametalmeari/bookstore.git
+```
+
+### Usage
+
+How to open your project in the browser? 
+Double click on HTML file and the HTML file will be open in your browser.
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  npm install --save-dev jest
+  npm install --save-dev @babel/plugin-transform-modules-commonjs
+  npm install --save-dev jest-environment-jsdom
+  npm install jquery
+  npm install --save-dev identity-obj-proxy
+  npm test
+```
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can deploy this project using:
 
-### `npm run build` fails to minify
+```sh
+  npm install gh-pages
+  npm run deploy 
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+> This project was done by Mohamad.
+
+👤 **Mohamad Almeari**
+
+- GitHub: [@githubhandle](https://github.com/mohametalmeari)
+- Twitter: [@twitterhandle](https://twitter.com/MohametAlmeari)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohamet-almeari)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> The Bookstore website will contain more animations in the future, providing a fully responsive design for optimal user experience.
+
+- [ ] **Animated Logo**
+- [ ] **Animated Buttons**
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+> Share and Review!
+
+We invite you to share this project with others and provide a favorable review if you find it to be useful.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDnpmENTS -->
+
+## 🙏 Acknowledgments <a name="acknowlednpments"></a>
+
+> The original design idea for this web page was created by Microverse Team.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ <a name="faq"></a>
+
+  
+- **How to build Bookstore?**
+
+  - Follow the steps in this link https://github.com/microverseinc/curriculum-react-redux/blob/main/bookstore/sneak_peek_v3_0.md
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
