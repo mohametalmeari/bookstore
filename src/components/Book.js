@@ -34,7 +34,7 @@ const Book = ({ title, author }) => (
       <img alt="Progress" />
       <div>
         <span>
-          64%
+          50%
         </span>
         <span>
           Completed
