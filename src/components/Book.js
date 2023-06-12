@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
-// import { useSelector } from 'react-redux';
 
 const Book = ({
   id, category, title, author,
 }) => {
-  // const { books } = useSelector((state) => state.books);
   const dispatch = useDispatch();
   return (
     <div className="book-container">
