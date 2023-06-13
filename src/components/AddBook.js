@@ -14,26 +14,29 @@ const AddBook = () => {
   };
 
   const dispatch = useDispatch();
-  const createBook = () => ({
-    id: uuid(),
-    category: 'Under construction',
-    title,
-    author,
-  });
+  const createBook = () => {
+    const book = {
+      id: uuid(),
+      category: 'Under construction',
+      title,
+      author,
+    };
+    dispatch(addBook(book));
+    setTitle('');
+    setAuthor('');
+  };
   return (
     <div className="addbook-container">
       <h2>
         ADD NEW BOOK
       </h2>
       <form className="addbook-form">
-        <input className="addbook-title" type="text" placeholder="Book title" onChange={handleInputTitle} />
-        <input className="addbook-author" type="text" placeholder="Author" onChange={handleInputAuthor} />
+        <input className="addbook-title" type="text" placeholder="Book title" value={title} onChange={handleInputTitle} />
+        <input className="addbook-author" type="text" placeholder="Author" value={author} onChange={handleInputAuthor} />
         <button
           className="addbook-btn"
           type="button"
-          onClick={() => {
-            dispatch(addBook(createBook()));
-          }}
+          onClick={createBook}
         >
           ADD BOOK
         </button>
