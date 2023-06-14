@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CloseIcon, MenuIcon } from '../icons';
+import profileIcon from '../images/profile-icon.png';
 
 const links = [
   { path: '/', text: 'Books' },
@@ -12,7 +13,7 @@ const Navbar = () => {
     <nav>
       <h1>
         <NavLink to="/">
-          Bookstore
+          Bookstore CMS
         </NavLink>
       </h1>
       <button className="show-menu" type="button" onClick={() => setShowMenu('flex')}>
@@ -42,6 +43,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <img className="profile-icon" alt="Profile" src={profileIcon} />
     </nav>
   );
 };

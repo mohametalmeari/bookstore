@@ -2,12 +2,17 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Anek Tamil', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Roboto Slab', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .show-menu svg {
   width: 1.5rem;
   color: #f29727;
+}
+
+.book-title {
+  color: #121212;
+  font-size: 1.375rem;
 }
 
 .close-menu svg {
@@ -28,7 +33,9 @@ nav {
   display: flex;
   flex-direction: row;
   width: 100%;
-  align-items: baseline;
+  align-items: center;
+  background-color: #fff;
+  min-height: 4rem;
 }
 
 h1 {
@@ -36,13 +43,23 @@ h1 {
 }
 
 h1 a {
-  padding: 1.5rem;
+  padding: 0;
   text-decoration: none;
-  color: #f29727;
+  color: #0290ff;
 }
 
 .progress-icon {
-  width: 10rem;
+  width: 4.25rem;
+}
+
+.current-chapter {
+  font-size: 0.8125rem;
+  color: gray;
+}
+
+.chapter-num {
+  color: #121212;
+  font-size: 1rem;
 }
 
 .show-menu {
@@ -71,7 +88,8 @@ h1 a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  flex: 1;
   height: 100%;
 }
 
@@ -90,7 +108,7 @@ h1 a {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: white;
+  background-color: #fff;
   padding: 2rem 1.5rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -105,11 +123,17 @@ body {
   display: flex;
   list-style-type: none;
   justify-content: stretch;
+  margin-top: 1.125rem;
 }
 
 .progress-text {
-  color: #f2be22;
-  font-size: x-large;
+  color: gray;
+  font-size: 0.875rem;
+}
+
+.progress-percent {
+  color: #121212;
+  font-size: 2rem;
 }
 
 .book-btns li {
@@ -129,7 +153,8 @@ body {
 .interaction-btn {
   border: none;
   background-color: transparent;
-  color: #f29727;
+  color: #4386bf;
+  font-size: 0.875rem;
 }
 
 .interaction-btn:hover {
@@ -143,18 +168,21 @@ body {
   gap: 0.5rem;
 }
 
-.update-btn {
+.update-btn,
+.addbook-btn {
   padding: 0.5rem;
-  background-color: transparent;
-  border: solid 1px #f29727;
-  border-radius: 1rem;
-  color: #f29727;
+  background-color: #0290ff;
+  border: solid 1px #fff;
+  border-radius: 3px;
+  color: #fff;
+  width: 11.5rem;
 }
 
-.update-btn:hover {
-  background-color: #f29727;
-  border: solid 1px #fff;
-  color: #fff;
+.update-btn:hover,
+.addbook-btn:hover {
+  background-color: #fff;
+  border: solid 1px #0290ff;
+  color: #0290ff;
 }
 
 .bookslist-container {
@@ -168,6 +196,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 1.375rem;
+  border-right: solid 1px #e8e8e8;
 }
 
 .book-progress div {
@@ -194,13 +224,13 @@ body {
 
 .addbook-title {
   flex: 3;
-  border: solid 1px #f2be22;
+  border: solid 1px #e8e8e8;
   color: #22a699;
 }
 
 .addbook-author {
   flex: 1.5;
-  border: solid 1px #f2be22;
+  border: solid 1px #e8e8e8;
   color: #22a699;
 }
 
@@ -209,28 +239,35 @@ body {
   outline: solid 1px #f24c3d;
 }
 
-.addbook-btn {
-  flex: 1;
-  background-color: transparent;
-  border: solid 1px #f29727;
-  color: #f29727;
-}
-
-.addbook-btn:hover {
-  background-color: #f29727;
-  color: #fff;
-}
-
 .add-book-header {
   padding: 1rem 0;
-  color: #f24c3d;
+  color: #888;
 }
 
 .msg {
   color: red;
 }
 
+.category-text {
+  color: gray;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.author-text {
+  color: #4386bf;
+  font-size: 0.875rem;
+}
+
+.profile-icon {
+  display: none;
+}
+
 @media screen and (min-width: 800px) {
+  .wrapper {
+    padding: 0;
+  }
+
   .bookslist-container {
     padding: 2.375rem 0;
   }
@@ -264,19 +301,34 @@ body {
 
   .menu {
     display: flex;
-    justify-content: end;
+    justify-content: start;
     position: static;
     flex-direction: row;
     background-color: transparent;
+    flex: 5;
+    gap: 2.5rem;
   }
 
   .page-link a {
-    color: #f24c3d;
-    font-size: x-large;
+    color: #121212;
+    font-size: 0.8125rem;
   }
 
   .close-menu {
     display: none;
+  }
+
+  h1 {
+    flex: 1;
+  }
+
+  nav {
+    padding: 0 6.25rem;
+  }
+
+  .profile-icon {
+    display: inline;
+    width: 3rem;
   }
 }
 
