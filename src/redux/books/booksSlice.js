@@ -34,6 +34,19 @@ export const addBook = createAsyncThunk(
   },
 );
 
+export const removeBook = createAsyncThunk(
+  'books/removeBook',
+  async (bookId, thunkAPI) => {
+    try {
+      const response = await axios.delete(`${baseUrl}/${appId}/books/${bookId}`);
+      thunkAPI.dispatch(getBooks());
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue('something went wrong');
+    }
+  },
+);
+
 const initialState = {
   books: [],
   isLoading: true,
