@@ -33,7 +33,7 @@ const AddBook = () => {
   };
   return (
     <div className="addbook-container">
-      <h2>
+      <h2 className="add-book-header">
         ADD NEW BOOK
       </h2>
       <form className="addbook-form">
@@ -47,7 +47,7 @@ const AddBook = () => {
           ADD BOOK
         </button>
       </form>
-      <span style={{ color: 'red' }}>{msg}</span>
+      <span className="msg">{msg}</span>
 
     </div>
   );
