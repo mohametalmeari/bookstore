@@ -6,6 +6,7 @@ import { addBook } from '../redux/books/booksSlice';
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [msg, setMsg] = useState('');
   const handleInputTitle = (e) => {
     setTitle(e.target.value);
   };
@@ -15,15 +16,20 @@ const AddBook = () => {
 
   const dispatch = useDispatch();
   const createBook = () => {
-    const book = {
-      id: uuid(),
-      category: 'Under construction',
+    const bookData = {
+      item_id: uuid(),
       title,
       author,
+      category: 'Under construction',
     };
-    dispatch(addBook(book));
-    setTitle('');
-    setAuthor('');
+    if (title !== '' && author !== '') {
+      dispatch(addBook(bookData));
+      setMsg('');
+      setTitle('');
+      setAuthor('');
+    } else {
+      setMsg('Fill all fields');
+    }
   };
   return (
     <div className="addbook-container">
@@ -31,8 +37,8 @@ const AddBook = () => {
         ADD NEW BOOK
       </h2>
       <form className="addbook-form">
-        <input className="addbook-title" type="text" placeholder="Book title" value={title} onChange={handleInputTitle} />
-        <input className="addbook-author" type="text" placeholder="Author" value={author} onChange={handleInputAuthor} />
+        <input className="addbook-title" type="text" placeholder="Book title" value={title} onChange={handleInputTitle} required />
+        <input className="addbook-author" type="text" placeholder="Author" value={author} onChange={handleInputAuthor} required />
         <button
           className="addbook-btn"
           type="button"
@@ -41,6 +47,7 @@ const AddBook = () => {
           ADD BOOK
         </button>
       </form>
+      <span style={{ color: 'red' }}>{msg}</span>
 
     </div>
   );
