@@ -6,6 +6,7 @@ import { addBook } from '../redux/books/booksSlice';
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [msg, setMsg] = useState('');
   const handleInputTitle = (e) => {
     setTitle(e.target.value);
   };
@@ -21,9 +22,14 @@ const AddBook = () => {
       author,
       category: 'Under construction',
     };
-    dispatch(addBook(bookData));
-    setTitle('');
-    setAuthor('');
+    if (title !== '' && author !== '') {
+      dispatch(addBook(bookData));
+      setMsg('');
+      setTitle('');
+      setAuthor('');
+    } else {
+      setMsg('Fill all fields');
+    }
   };
   return (
     <div className="addbook-container">
@@ -36,11 +42,12 @@ const AddBook = () => {
         <button
           className="addbook-btn"
           type="button"
-          onSubmit={createBook}
+          onClick={createBook}
         >
           ADD BOOK
         </button>
       </form>
+      <span style={{ color: 'red' }}>{msg}</span>
 
     </div>
   );

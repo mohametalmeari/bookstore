@@ -8,7 +8,7 @@ const BooksList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooks());
-  }, []);
+  }, [dispatch]);
 
   if (isLoading) {
     return (

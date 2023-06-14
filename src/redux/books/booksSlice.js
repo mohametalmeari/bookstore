@@ -2,14 +2,15 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
-const appId = 'VDMpOJ9cfQIt0CqEJGuh';
+const appId = 'c4RKa5nVJrKnZGi2NIcP';
 
 export const getBooks = createAsyncThunk(
   'books/getBooks',
   async (thunkAPI) => {
     try {
       const response = await axios.get(`${baseUrl}/${appId}/books`);
-
+      // const resp = await axios.post(`${baseUrl}`);
+      // console.log(resp);
       const books = Object.entries(response.data).map(([key, value]) => ({
         item_id: key,
         ...value[0],
