@@ -226,6 +226,10 @@ body {
   color: #f24c3d;
 }
 
+.msg {
+  color: red;
+}
+
 @media screen and (min-width: 800px) {
   .bookslist-container {
     padding: 2.375rem 0;
