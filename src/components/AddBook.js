@@ -31,12 +31,12 @@ const AddBook = () => {
         ADD NEW BOOK
       </h2>
       <form className="addbook-form">
-        <input className="addbook-title" type="text" placeholder="Book title" value={title} onChange={handleInputTitle} />
-        <input className="addbook-author" type="text" placeholder="Author" value={author} onChange={handleInputAuthor} />
+        <input className="addbook-title" type="text" placeholder="Book title" value={title} onChange={handleInputTitle} required />
+        <input className="addbook-author" type="text" placeholder="Author" value={author} onChange={handleInputAuthor} required />
         <button
           className="addbook-btn"
           type="button"
-          onClick={createBook}
+          onSubmit={createBook}
         >
           ADD BOOK
         </button>
