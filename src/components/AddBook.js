@@ -47,7 +47,7 @@ const AddBook = () => {
           ADD BOOK
         </button>
       </form>
-      <span className='msg'>{msg}</span>
+      <span className="msg">{msg}</span>
 
     </div>
   );
