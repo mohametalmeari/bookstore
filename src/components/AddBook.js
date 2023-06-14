@@ -15,13 +15,13 @@ const AddBook = () => {
 
   const dispatch = useDispatch();
   const createBook = () => {
-    const book = {
-      id: uuid(),
-      category: 'Under construction',
+    const bookData = {
+      item_id: uuid(),
       title,
       author,
+      category: 'Under construction',
     };
-    dispatch(addBook(book));
+    dispatch(addBook(bookData));
     setTitle('');
     setAuthor('');
   };

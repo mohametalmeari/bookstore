@@ -1,8 +1,22 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Book from './Book';
+import { getBooks } from '../redux/books/booksSlice';
 
 const BooksList = () => {
-  const { books } = useSelector((state) => state.books);
+  const { books, isLoading } = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="bookslist-container">
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <div className="bookslist-container">
       {
