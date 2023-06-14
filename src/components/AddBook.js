@@ -33,7 +33,7 @@ const AddBook = () => {
   };
   return (
     <div className="addbook-container">
-      <h2>
+      <h2 className="add-book-header">
         ADD NEW BOOK
       </h2>
       <form className="addbook-form">

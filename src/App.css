@@ -1,11 +1,100 @@
-.book-container {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Anek Tamil', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.show-menu svg {
+  width: 1.5rem;
+  color: #f29727;
+}
+
+.close-menu svg {
+  width: 1.5rem;
+  color: #fff;
+}
+
+.wrapper {
+  padding: 1rem;
+}
+
+.invisible-btn {
+  background: none;
+  border: none;
+}
+
+nav {
   display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: baseline;
+}
+
+h1 {
+  flex: 1;
+}
+
+h1 a {
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #f29727;
+}
+
+.progress-icon {
+  width: 10rem;
+}
+
+.show-menu {
+  padding: 1rem;
+  border: none;
+  background: none;
+}
+
+.close-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  border: none;
+  background: none;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  background-color: #f24c3d;
+  padding: 2rem;
+  margin: 0;
+  gap: 5rem;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-link {
+  list-style-type: none;
+}
+
+.page-link a {
+  text-decoration: none;
+  color: #fff;
+  font-size: xx-large;
+}
+
+.book-container {
+  color: #22a699;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   background-color: white;
   padding: 2rem 1.5rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
-  justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 
 body {
@@ -15,30 +104,61 @@ body {
 .book-btns {
   display: flex;
   list-style-type: none;
-  padding: 0;
   justify-content: stretch;
+}
+
+.progress-text {
+  color: #f2be22;
+  font-size: x-large;
 }
 
 .book-btns li {
   border-right: solid 2px #e8e8e8;
+  padding: 0 1rem;
+}
+
+.book-btns li:first-child {
+  border-right: solid 2px #e8e8e8;
+  padding-left: 0;
 }
 
 .book-btns li:last-child {
   border-right: none;
 }
 
-.book-btns button {
+.interaction-btn {
   border: none;
   background-color: transparent;
+  color: #f29727;
+}
+
+.interaction-btn:hover {
+  font-weight: bolder;
+  color: #f2be22;
 }
 
 .book-chapters {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+}
+
+.update-btn {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: solid 1px #f29727;
+  border-radius: 1rem;
+  color: #f29727;
+}
+
+.update-btn:hover {
+  background-color: #f29727;
+  border: solid 1px #fff;
+  color: #fff;
 }
 
 .bookslist-container {
-  padding: 2.375rem 6.25rem;
+  padding: 0 0 2.375rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -46,7 +166,8 @@ body {
 
 .book-progress {
   display: flex;
-  gap: 1.3rem;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .book-progress div {
@@ -58,11 +179,11 @@ body {
   display: flex;
   flex-direction: column;
   border-top: solid 1px #e8e8e8;
-  padding: 0 6.25rem 6.25rem;
 }
 
 .addbook-form {
   display: flex;
+  flex-direction: column;
   justify-content: stretch;
   gap: 2.125rem;
 }
@@ -73,12 +194,94 @@ body {
 
 .addbook-title {
   flex: 3;
+  border: solid 1px #f2be22;
+  color: #22a699;
 }
 
 .addbook-author {
   flex: 1.5;
+  border: solid 1px #f2be22;
+  color: #22a699;
+}
+
+.addbook-title:focus,
+.addbook-author:focus {
+  outline: solid 1px #f24c3d;
 }
 
 .addbook-btn {
   flex: 1;
+  background-color: transparent;
+  border: solid 1px #f29727;
+  color: #f29727;
+}
+
+.addbook-btn:hover {
+  background-color: #f29727;
+  color: #fff;
+}
+
+.add-book-header {
+  padding: 1rem 0;
+  color: #f24c3d;
+}
+
+@media screen and (min-width: 800px) {
+  .bookslist-container {
+    padding: 2.375rem 0;
+  }
+
+  .book-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .book-container > div {
+    flex: 1;
+  }
+
+  .progress-text {
+    font-size: large;
+  }
+
+  .addbook-form {
+    flex-direction: row;
+  }
+
+  .book-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .show-menu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: end;
+    position: static;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .page-link a {
+    color: #f24c3d;
+    font-size: x-large;
+  }
+
+  .close-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .bookslist-container {
+    padding: 2.375rem 6.25rem;
+  }
+
+  .addbook-container {
+    padding: 0 6.25rem 6.25rem;
+  }
 }

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
+import progressIcon from '../images/progress-icon.png';
 
 const Book = ({
   id, category, title, author,
@@ -20,29 +21,29 @@ const Book = ({
         </span>
         <ul className="book-btns">
           <li>
-            <button type="button">
+            <button className="interaction-btn" type="button">
               Comments
             </button>
           </li>
           <li>
-            <button type="button" onClick={() => { dispatch(removeBook(id)); }}>
+            <button className="interaction-btn" type="button" onClick={() => { dispatch(removeBook(id)); }}>
               Remove
             </button>
           </li>
           <li>
-            <button type="button">
+            <button className="interaction-btn" type="button">
               Edit
             </button>
           </li>
         </ul>
       </div>
       <div className="book-progress">
-        <img alt="Progress" />
+        <img className="progress-icon" alt="Progress" src={progressIcon} />
         <div>
-          <span>
+          <span className="progress-text">
             40%
           </span>
-          <span>
+          <span className="progress-text">
             Completed
           </span>
         </div>
@@ -54,7 +55,7 @@ const Book = ({
         <span>
           Chapter 17
         </span>
-        <button type="button">
+        <button className="update-btn" type="button">
           UPDATE PROGRESS
         </button>
       </div>
