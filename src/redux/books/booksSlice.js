@@ -21,6 +21,19 @@ export const getBooks = createAsyncThunk(
   },
 );
 
+export const addBook = createAsyncThunk(
+  'books/addBook',
+  async (bookData, thunkAPI) => {
+    try {
+      const response = await axios.post(`${baseUrl}/${appId}/books`, bookData);
+      thunkAPI.dispatch(getBooks());
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue('something went wrong');
+    }
+  },
+);
+
 const initialState = {
   books: [],
   isLoading: true,
