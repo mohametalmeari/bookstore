@@ -36,7 +36,7 @@
 
 # 📖 Bookstore <a name="about-project"></a>
 
-**Bookstore**  is a website for saving books and tracking your favorite books' reading progress.
+**Bookstore** is a website for saving books and tracking your favorite books' reading progress.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -63,7 +63,7 @@ Includes the following features...
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
- <!-- - [Live Demo Link](https://mohametalmeari.github.io/bookstore) -->
+ - [Live Demo Link](https://mohametalmeari.github.io/bookstore)
 
 
 
