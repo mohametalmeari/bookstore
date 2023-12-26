@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 import { removeBook } from '../redux/books/booksSlice';
 import progressIcon from '../images/progress-icon.png';
 import ProgressBar from './ProgressBar';
@@ -7,7 +8,17 @@ import ProgressBar from './ProgressBar';
 const Book = ({
   id, category, title, author,
 }) => {
-  const progress = 90;
+  const [chapters, setChapters] = useState({ total: 20, read: 1 });
+  const [progress, setProgress] = useState(0);
+
+  const handleUpdateProgress = () => {
+    if (chapters.read === chapters.total) {
+      setChapters({ ...chapters, read: 1 });
+    } else {
+      setChapters({ ...chapters, read: chapters.read + 1 });
+    }
+    setProgress(Math.round((chapters.read / chapters.total) * 100));
+  };
   const dispatch = useDispatch();
   return (
     <div className="book-container">
@@ -60,9 +71,11 @@ const Book = ({
           CURRENT CHAPTER
         </span>
         <span className="chapter-num">
-          Chapter 17
+          Chapter
+          {' '}
+          {chapters.read}
         </span>
-        <button className="update-btn" type="button">
+        <button className="update-btn" type="button" onClick={handleUpdateProgress}>
           UPDATE PROGRESS
         </button>
       </div>

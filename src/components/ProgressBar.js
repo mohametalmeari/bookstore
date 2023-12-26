@@ -8,7 +8,12 @@ const ProgressBar = ({ percentage, length, thickness }) => {
   const center = length / 2;
 
   const handleCoord = () => {
-    const angle = (2 * Math.PI * percentage) / 100;
+    let angle = (2 * Math.PI * percentage) / 100;
+    if (percentage <= 0) {
+      angle = 0.04;
+    } else if (percentage >= 100) {
+      angle = 1.994 * Math.PI;
+    }
     const x1 = center + center * Math.sin(angle);
     const y1 = (center - center * Math.cos(angle));
     const x2 = (center + (center - thickness) * Math.sin(angle));
