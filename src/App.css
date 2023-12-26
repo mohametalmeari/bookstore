@@ -48,8 +48,8 @@ h1 a {
   color: #0290ff;
 }
 
-.progress-icon {
-  width: 4.25rem;
+.progress-icon > svg {
+  scale: 0.7;
 }
 
 .current-chapter {

@@ -2,10 +2,12 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 import progressIcon from '../images/progress-icon.png';
+import ProgressBar from './ProgressBar';
 
 const Book = ({
   id, category, title, author,
 }) => {
+  const progress = 90;
   const dispatch = useDispatch();
   return (
     <div className="book-container">
@@ -38,10 +40,15 @@ const Book = ({
         </ul>
       </div>
       <div className="book-progress">
-        <img className="progress-icon" alt="Progress" src={progressIcon} />
+        {<ProgressBar
+          percentage={progress}
+          length={100}
+          thickness={7}
+        /> || <img className="progress-icon" alt="Progress" src={progressIcon} />}
         <div>
           <span className="progress-percent">
-            64%
+            {progress}
+            %
           </span>
           <span className="progress-text">
             Completed
